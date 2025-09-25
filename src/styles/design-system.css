@@ -1,0 +1,416 @@
+/* ========================================
+   DESIGN SYSTEM
+   ======================================== */
+
+:root {
+  /* ========================================
+     TYPOGRAPHY SYSTEM
+     ======================================== */
+  
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 36px;
+  --font-size-6xl: 48px;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.4;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  
+  /* ========================================
+     BORDER SYSTEM
+     ======================================== */
+  
+  /* Border Radius */
+  --border-radius-none: 0;
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 6px;
+  --border-radius-xl: 8px;
+  --border-radius-2xl: 12px;
+  --border-radius-3xl: 16px;
+  --border-radius-full: 9999px;
+  
+  /* Border Widths */
+  --border-width-none: 0;
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+  --border-width-xl: 4px;
+  
+  /* ========================================
+     SIZING SYSTEM
+     ======================================== */
+  
+  /* Component Heights */
+  --height-xs: 24px;
+  --height-sm: 32px;
+  --height-md: 36px;
+  --height-lg: 44px;
+  --height-xl: 52px;
+  --height-2xl: 64px;
+  --height-3xl: 80px;
+  
+  /* Component Widths */
+  --width-xs: 64px;
+  --width-sm: 128px;
+  --width-md: 256px;
+  --width-lg: 384px;
+  --width-xl: 512px;
+  --width-2xl: 640px;
+  --width-3xl: 768px;
+  --width-4xl: 1024px;
+  --width-5xl: 1200px;
+  --width-6xl: 1400px;
+  --width-full: 100%;
+  --width-screen: 100vw;
+  
+  /* Min Heights */
+  --min-height-xs: 24px;
+  --min-height-sm: 32px;
+  --min-height-md: 36px;
+  --min-height-lg: 44px;
+  --min-height-xl: 52px;
+  --min-height-2xl: 64px;
+  --min-height-3xl: 80px;
+  --min-height-screen: 100vh;
+  
+  /* Max Widths */
+  --max-width-xs: 320px;
+  --max-width-sm: 384px;
+  --max-width-md: 448px;
+  --max-width-lg: 512px;
+  --max-width-xl: 576px;
+  --max-width-2xl: 672px;
+  --max-width-3xl: 768px;
+  --max-width-4xl: 896px;
+  --max-width-5xl: 1024px;
+  --max-width-6xl: 1152px;
+  --max-width-7xl: 1280px;
+  --max-width-full: none;
+  
+  /* ========================================
+     SHADOW SYSTEM
+     ======================================== */
+  
+  /* Box Shadows */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px var(--color-shadow-light);
+  --shadow-sm: 0 1px 3px var(--color-shadow-medium), 0 1px 2px var(--color-shadow-light);
+  --shadow-md: 0 4px 6px var(--color-shadow-medium), 0 2px 4px var(--color-shadow-light);
+  --shadow-lg: 0 10px 15px var(--color-shadow-medium), 0 4px 6px var(--color-shadow-light);
+  --shadow-xl: 0 20px 25px var(--color-shadow-medium), 0 10px 10px var(--color-shadow-light);
+  --shadow-2xl: 0 25px 50px var(--color-shadow-heavy);
+  --shadow-inner: inset 0 2px 4px var(--color-shadow-light);
+  
+  /* Focus Shadows */
+  --shadow-focus-sm: 0 0 0 2px var(--color-shadow-focus);
+  --shadow-focus-md: 0 0 0 3px var(--color-shadow-focus);
+  --shadow-focus-lg: 0 0 0 4px var(--color-shadow-focus);
+  --shadow-focus-error: 0 0 0 3px var(--color-shadow-error);
+  --shadow-focus-success: 0 0 0 3px var(--color-shadow-success);
+  --shadow-focus-primary: 0 0 0 3px var(--color-shadow-focus);
+  
+  /* ========================================
+     TRANSITION SYSTEM
+     ======================================== */
+  
+  /* Transition Durations */
+  --transition-duration-75: 75ms;
+  --transition-duration-100: 100ms;
+  --transition-duration-150: 150ms;
+  --transition-duration-200: 200ms;
+  --transition-duration-300: 300ms;
+  --transition-duration-500: 500ms;
+  --transition-duration-700: 700ms;
+  --transition-duration-1000: 1000ms;
+  
+  /* Transition Timing Functions */
+  --transition-timing-linear: linear;
+  --transition-timing-ease-in: ease-in;
+  --transition-timing-ease-out: ease-out;
+  --transition-timing-ease-in-out: ease-in-out;
+  --transition-timing-ease: ease;
+  
+  /* Common Transitions */
+  --transition-fast: all var(--transition-duration-150) var(--transition-timing-ease);
+  --transition-normal: all var(--transition-duration-200) var(--transition-timing-ease);
+  --transition-slow: all var(--transition-duration-300) var(--transition-timing-ease);
+  
+  /* Specific Transitions */
+  --transition-opacity: opacity var(--transition-duration-200) var(--transition-timing-ease);
+  --transition-transform: transform var(--transition-duration-200) var(--transition-timing-ease);
+  --transition-colors: color var(--transition-duration-200) var(--transition-timing-ease), 
+                       background-color var(--transition-duration-200) var(--transition-timing-ease),
+                       border-color var(--transition-duration-200) var(--transition-timing-ease);
+  --transition-shadow: box-shadow var(--transition-duration-200) var(--transition-timing-ease);
+  
+  /* ========================================
+     Z-INDEX SYSTEM
+     ======================================== */
+  
+  --z-index-auto: auto;
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+  --z-index-toast: 1080;
+  
+  /* ========================================
+     BREAKPOINT SYSTEM
+     ======================================== */
+  
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ========================================
+     COMPONENT-SPECIFIC VALUES
+     ======================================== */
+  
+  /* Button */
+  --button-height-sm: var(--height-md);
+  --button-height-md: var(--height-lg);
+  --button-height-lg: var(--height-xl);
+  --button-border-radius: var(--border-radius-md);
+  --button-transition: var(--transition-colors);
+  
+  /* Input */
+  --input-height-sm: var(--height-md);
+  --input-height-md: var(--height-lg);
+  --input-height-lg: var(--height-xl);
+  --input-border-radius: var(--border-radius-md);
+  --input-transition: var(--transition-colors);
+  --input-focus-shadow: var(--shadow-focus-md);
+  
+  /* Card */
+  --card-border-radius: var(--border-radius-xl);
+  --card-transition: var(--transition-shadow);
+  --card-shadow-default: var(--shadow-md);
+  --card-shadow-hover: var(--shadow-lg);
+  
+  /* Form */
+  --form-field-spacing: var(--spacing-form-field);
+  --form-group-spacing: var(--spacing-form-group);
+  --form-section-spacing: var(--spacing-form-section);
+  
+  /* Navigation */
+  --nav-item-spacing: var(--spacing-nav-item);
+  --nav-section-spacing: var(--spacing-nav-section);
+  
+  /* Layout */
+  --container-max-width: var(--max-width-7xl);
+  --container-padding: var(--spacing-container);
+  --section-spacing: var(--spacing-section);
+  --page-spacing: var(--spacing-page);
+}
+
+/* ========================================
+   TYPOGRAPHY UTILITY CLASSES
+   ======================================== */
+
+/* Font Sizes */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+.text-6xl { font-size: var(--font-size-6xl); }
+
+/* Font Weights */
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+
+/* Line Heights */
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-snug { line-height: var(--line-height-snug); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+.leading-loose { line-height: var(--line-height-loose); }
+
+/* Letter Spacing */
+.tracking-tight { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide { letter-spacing: var(--letter-spacing-wide); }
+.tracking-wider { letter-spacing: var(--letter-spacing-wider); }
+.tracking-widest { letter-spacing: var(--letter-spacing-widest); }
+
+/* ========================================
+   BORDER UTILITY CLASSES
+   ======================================== */
+
+/* Border Radius */
+.rounded-none { border-radius: var(--border-radius-none); }
+.rounded-sm { border-radius: var(--border-radius-sm); }
+.rounded-md { border-radius: var(--border-radius-md); }
+.rounded-lg { border-radius: var(--border-radius-lg); }
+.rounded-xl { border-radius: var(--border-radius-xl); }
+.rounded-2xl { border-radius: var(--border-radius-2xl); }
+.rounded-3xl { border-radius: var(--border-radius-3xl); }
+.rounded-full { border-radius: var(--border-radius-full); }
+
+/* Border Widths */
+.border-none { border-width: var(--border-width-none); }
+.border-sm { border-width: var(--border-width-sm); }
+.border-md { border-width: var(--border-width-md); }
+.border-lg { border-width: var(--border-width-lg); }
+.border-xl { border-width: var(--border-width-xl); }
+
+/* ========================================
+   SIZING UTILITY CLASSES
+   ======================================== */
+
+/* Heights */
+.h-xs { height: var(--height-xs); }
+.h-sm { height: var(--height-sm); }
+.h-md { height: var(--height-md); }
+.h-lg { height: var(--height-lg); }
+.h-xl { height: var(--height-xl); }
+.h-2xl { height: var(--height-2xl); }
+.h-3xl { height: var(--height-3xl); }
+
+/* Min Heights */
+.min-h-xs { min-height: var(--min-height-xs); }
+.min-h-sm { min-height: var(--min-height-sm); }
+.min-h-md { min-height: var(--min-height-md); }
+.min-h-lg { min-height: var(--min-height-lg); }
+.min-h-xl { min-height: var(--min-height-xl); }
+.min-h-2xl { min-height: var(--min-height-2xl); }
+.min-h-3xl { min-height: var(--min-height-3xl); }
+.min-h-screen { min-height: var(--min-height-screen); }
+
+/* Widths */
+.w-xs { width: var(--width-xs); }
+.w-sm { width: var(--width-sm); }
+.w-md { width: var(--width-md); }
+.w-lg { width: var(--width-lg); }
+.w-xl { width: var(--width-xl); }
+.w-2xl { width: var(--width-2xl); }
+.w-3xl { width: var(--width-3xl); }
+.w-4xl { width: var(--width-4xl); }
+.w-5xl { width: var(--width-5xl); }
+.w-6xl { width: var(--width-6xl); }
+.w-full { width: var(--width-full); }
+.w-screen { width: var(--width-screen); }
+
+/* Max Widths */
+.max-w-xs { max-width: var(--max-width-xs); }
+.max-w-sm { max-width: var(--max-width-sm); }
+.max-w-md { max-width: var(--max-width-md); }
+.max-w-lg { max-width: var(--max-width-lg); }
+.max-w-xl { max-width: var(--max-width-xl); }
+.max-w-2xl { max-width: var(--max-width-2xl); }
+.max-w-3xl { max-width: var(--max-width-3xl); }
+.max-w-4xl { max-width: var(--max-width-4xl); }
+.max-w-5xl { max-width: var(--max-width-5xl); }
+.max-w-6xl { max-width: var(--max-width-6xl); }
+.max-w-7xl { max-width: var(--max-width-7xl); }
+.max-w-full { max-width: var(--max-width-full); }
+
+/* ========================================
+   SHADOW UTILITY CLASSES
+   ======================================== */
+
+/* Box Shadows */
+.shadow-none { box-shadow: var(--shadow-none); }
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+.shadow-inner { box-shadow: var(--shadow-inner); }
+
+/* Focus Shadows */
+.shadow-focus-sm { box-shadow: var(--shadow-focus-sm); }
+.shadow-focus-md { box-shadow: var(--shadow-focus-md); }
+.shadow-focus-lg { box-shadow: var(--shadow-focus-lg); }
+.shadow-focus-error { box-shadow: var(--shadow-focus-error); }
+.shadow-focus-success { box-shadow: var(--shadow-focus-success); }
+.shadow-focus-primary { box-shadow: var(--shadow-focus-primary); }
+
+/* ========================================
+   TRANSITION UTILITY CLASSES
+   ======================================== */
+
+/* Common Transitions */
+.transition-fast { transition: var(--transition-fast); }
+.transition-normal { transition: var(--transition-normal); }
+.transition-slow { transition: var(--transition-slow); }
+
+/* Specific Transitions */
+.transition-opacity { transition: var(--transition-opacity); }
+.transition-transform { transition: var(--transition-transform); }
+.transition-colors { transition: var(--transition-colors); }
+.transition-shadow { transition: var(--transition-shadow); }
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+/* Mobile First Approach */
+@media (min-width: 640px) {
+  .sm\:text-lg { font-size: var(--font-size-lg); }
+  .sm\:h-lg { height: var(--height-lg); }
+  .sm\:w-lg { width: var(--width-lg); }
+}
+
+@media (min-width: 768px) {
+  .md\:text-xl { font-size: var(--font-size-xl); }
+  .md\:h-xl { height: var(--height-xl); }
+  .md\:w-xl { width: var(--width-xl); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-2xl { font-size: var(--font-size-2xl); }
+  .lg\:h-2xl { height: var(--height-2xl); }
+  .lg\:w-2xl { width: var(--width-2xl); }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-3xl { font-size: var(--font-size-3xl); }
+  .xl\:h-3xl { height: var(--height-3xl); }
+  .xl\:w-3xl { width: var(--width-3xl); }
+}

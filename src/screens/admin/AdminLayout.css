@@ -1,0 +1,83 @@
+/* ========================================
+   ADMIN LAYOUT STYLES
+   ======================================== */
+
+.admin-layout {
+  min-height: 100vh;
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  position: relative;
+}
+
+.admin-layout__sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-layout__header {
+  position: fixed;
+  top: 0;
+  left: 280px;
+  right: 0;
+  z-index: 99;
+}
+
+.admin-layout__main {
+  flex: 1;
+  margin-left: 280px;
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+  background-color: var(--color-bg-primary);
+  transition: margin-left 0.3s ease;
+}
+
+.admin-layout__main__not-logged-in {
+  flex: 1;
+  min-height: calc(100vh - 70px);
+  background-color: var(--color-bg-primary);
+  transition: margin-left 0.3s ease;
+}
+
+
+.admin-layout__content {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .admin-layout__header {
+    left: 0;
+  }
+
+  .admin-layout__main {
+    margin-left: 0;
+  }
+
+  .admin-layout__content {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-layout__content {
+    padding: var(--spacing-md);
+  }
+}
+
+/* ========================================
+   DARK THEME
+   ======================================== */
+
+[data-theme="dark"] .admin-layout {
+  background-color: var(--color-bg-secondary-dark);
+}
+
+[data-theme="dark"] .admin-layout__main {
+  background-color: var(--color-bg-primary-dark);
+}

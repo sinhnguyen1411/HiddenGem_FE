@@ -1,0 +1,134 @@
+.blog-detail-manage {
+  padding: 24px;
+}
+
+.blog-detail-manage__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.blog-detail-manage__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.blog-detail-manage__status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.blog-detail-manage__status-badge--published {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.blog-detail-manage__status-badge--draft {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.blog-detail-manage__status-badge--archived {
+  background: rgba(107, 114, 128, 0.15);
+  color: #6b7280;
+}
+
+.blog-detail-manage__header-right {
+  display: flex;
+  gap: 8px;
+}
+
+.blog-detail-manage__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+
+.blog-detail-manage__content {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+  gap: 24px;
+}
+
+.blog-detail-manage__image {
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--color-surface-2);
+}
+
+.blog-detail-manage__image-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-detail-manage__section {
+  margin-top: 24px;
+}
+
+.blog-detail-manage__section-title {
+  margin-bottom: 8px;
+}
+
+.blog-detail-manage__panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.blog-detail-manage__panel-title {
+  margin-bottom: 12px;
+}
+
+.blog-detail-manage__panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.blog-detail-manage__panel-row:last-child {
+  border-bottom: none;
+}
+
+.blog-detail-manage__panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.blog-detail-manage__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 320px;
+  text-align: center;
+}
+
+.blog-detail-manage__empty-actions {
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .blog-detail-manage__content {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-detail-manage__stats {
+    grid-template-columns: 1fr;
+  }
+}

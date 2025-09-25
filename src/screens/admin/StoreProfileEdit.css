@@ -1,0 +1,23 @@
+.store-profile-edit { display: flex; flex-direction: column; gap: 24px; }
+
+.store-profile-edit__header { display: flex; align-items: center; justify-content: space-between; }
+.store-profile-edit__breadcrumbs { display: flex; flex-direction: column; gap: 4px; }
+.store-profile-edit__breadcrumbs-current { font-weight: 700; }
+.store-profile-edit__actions { display: flex; gap: 12px; }
+
+.store-profile-edit__card { background: var(--color-surface-primary, #fff); border-radius: 16px; padding: 24px; box-shadow: 14px 17px 40px 4px rgba(112,144,176,0.08); display: flex; flex-direction: column; gap: 24px; }
+
+.store-profile-edit__cover { position: relative; }
+.store-profile-edit__coverImage { width: 100%; height: 220px; background: #d9d9d9; border-radius: 16px; }
+.store-profile-edit__editCover { position: absolute; right: 16px; bottom: 16px; width: 40px; height: 40px; border-radius: 8px; border: 1px solid #603809; background: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+.store-profile-edit__editCoverIcon { width: 16px; height: 16px; border: 1.5px solid #603809; border-top-color: transparent; border-left-color: transparent; transform: rotate(45deg); }
+
+.store-profile-edit__formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.store-profile-edit__field { display: flex; flex-direction: column; gap: 8px; }
+.store-profile-edit__error { color: var(--color-border-error, #dc2626); }
+
+@media (max-width: 1024px) {
+  .store-profile-edit__formGrid { grid-template-columns: 1fr; }
+}
+
+

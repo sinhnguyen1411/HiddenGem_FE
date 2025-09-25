@@ -1,0 +1,300 @@
+/* ========================================
+   ADMIN TABLE STYLES
+   ======================================== */
+
+.admin-table {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-table__container {
+  overflow-x: auto;
+}
+
+.admin-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.admin-table__header {
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.admin-table__header-row {
+  height: 50px;
+}
+
+.admin-table__header-cell {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  border-right: 1px solid var(--color-border-light);
+  position: relative;
+}
+
+.admin-table__header-cell:last-child {
+  border-right: none;
+}
+
+.admin-table__header-cell--sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.admin-table__header-cell--sortable:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.admin-table__header-cell--actions {
+  width: 120px;
+  text-align: center;
+}
+
+.admin-table__header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.admin-table__header-text {
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-table__sort-icon {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.admin-table__header-cell--sortable:hover .admin-table__sort-icon {
+  opacity: 1;
+}
+
+.admin-table__body {
+  background-color: var(--color-bg-primary);
+}
+
+.admin-table__row {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background-color 0.2s ease;
+}
+
+.admin-table__row:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.admin-table__row:last-child {
+  border-bottom: none;
+}
+
+.admin-table__cell {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-right: 1px solid var(--color-border-light);
+  vertical-align: middle;
+}
+
+.admin-table__cell:last-child {
+  border-right: none;
+}
+
+.admin-table__cell--actions {
+  text-align: center;
+  width: 120px;
+}
+
+.admin-table__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.admin-table__action-btn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease;
+}
+
+.admin-table__action-btn:hover {
+  transform: scale(1.05);
+}
+
+.admin-table__action-btn--danger:hover {
+  background-color: var(--color-danger-light);
+  border-color: var(--color-danger);
+}
+
+.admin-table__status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-table__status--open {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.admin-table__status--closed {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.admin-table__status--inactive {
+  background-color: var(--color-muted-light);
+  color: var(--color-muted);
+}
+
+.admin-table__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.admin-table__stars {
+  color: var(--color-warning);
+  font-size: 0.9rem;
+}
+
+.admin-table__rating-value {
+  margin: 0;
+  font-weight: 500;
+}
+
+.admin-table__image {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-table__image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-table--empty {
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.admin-table__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .admin-table__container {
+    border-radius: 0;
+  }
+
+  .admin-table__table {
+    min-width: 400px;
+  }
+
+  .admin-table__header-cell,
+  .admin-table__cell {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .admin-table__actions {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .admin-table__action-btn {
+    min-width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-table__table {
+    min-width: 350px;
+  }
+
+  .admin-table__header-cell,
+  .admin-table__cell {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .admin-table__image {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ========================================
+   DARK THEME
+   ======================================== */
+
+[data-theme="dark"] .admin-table {
+  background-color: var(--color-bg-primary-dark);
+  border-color: var(--color-border-dark);
+}
+
+[data-theme="dark"] .admin-table__header {
+  background-color: var(--color-bg-secondary-dark);
+  border-bottom-color: var(--color-border-dark);
+}
+
+[data-theme="dark"] .admin-table__header-cell {
+  border-right-color: var(--color-border-dark);
+}
+
+[data-theme="dark"] .admin-table__header-cell--sortable:hover {
+  background-color: var(--color-bg-hover-dark);
+}
+
+[data-theme="dark"] .admin-table__row {
+  border-bottom-color: var(--color-border-dark);
+}
+
+[data-theme="dark"] .admin-table__row:hover {
+  background-color: var(--color-bg-hover-dark);
+}
+
+[data-theme="dark"] .admin-table__cell {
+  border-right-color: var(--color-border-dark);
+}
+
+[data-theme="dark"] .admin-table__status--open {
+  background-color: var(--color-success-light-dark);
+}
+
+[data-theme="dark"] .admin-table__status--closed {
+  background-color: var(--color-warning-light-dark);
+}
+
+[data-theme="dark"] .admin-table__status--inactive {
+  background-color: var(--color-muted-light-dark);
+}
+
+[data-theme="dark"] .admin-table__action-btn--danger:hover {
+  background-color: var(--color-danger-light-dark);
+}

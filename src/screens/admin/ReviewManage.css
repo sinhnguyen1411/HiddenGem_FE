@@ -1,0 +1,241 @@
+.review-manage {
+  padding: 24px;
+}
+
+.review-manage__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.review-manage__header-left {
+  flex: 1;
+}
+
+.review-manage__title {
+  margin-bottom: 8px;
+}
+
+.review-manage__subtitle {
+  margin-bottom: 0;
+}
+
+.review-manage__header-right {
+  display: flex;
+  gap: 8px;
+}
+
+.review-manage__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.review-manage__stat-card {
+  /* Inherits styles from AdminStatsCard */
+}
+
+.review-manage__filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.review-manage__filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.review-manage__search-input {
+  width: 100%;
+}
+
+.review-manage__filter-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.review-manage__filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.review-manage__table-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.review-manage__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-manage__user-name {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.review-manage__menu-item {
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.review-manage__store-name {
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.review-manage__store-id {
+  line-height: 1.2;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.review-manage__content {
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.review-manage__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.review-manage__star {
+  font-size: 16px;
+  color: var(--color-border);
+  transition: color 0.2s ease;
+}
+
+.review-manage__star--filled {
+  color: #fbbf24;
+}
+
+.review-manage__rating-text {
+  margin-left: 4px;
+  font-size: 11px;
+}
+
+.review-manage__status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.review-manage__status-badge--published {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.review-manage__status-badge--pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.review-manage__status-badge--rejected {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.review-manage__status-badge--hidden {
+  background: rgba(107, 114, 128, 0.15);
+  color: #6b7280;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .review-manage__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .review-manage__filters {
+    flex-direction: column;
+  }
+  
+  .review-manage__filter-group {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-manage {
+    padding: 16px;
+  }
+  
+  .review-manage__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .review-manage__header-right {
+    justify-content: flex-end;
+  }
+  
+  .review-manage__stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .review-manage__filters {
+    gap: 12px;
+  }
+  
+  .review-manage__content {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .review-manage__filter-select {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .review-manage__filter-select:focus {
+  border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .review-manage__table-section {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+/* Loading and error states */
+.review-manage__loading,
+.review-manage__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.review-manage__retry-btn {
+  margin-top: 8px;
+}

@@ -1,0 +1,47 @@
+.info-card {
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+}
+
+.info-card--testimonial {
+  text-align: left;
+}
+
+.info-card__icon {
+  height: 80px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-4);
+  border: 2px dashed var(--color-border);
+}
+
+.info-card__title {
+  margin-bottom: var(--spacing-3);
+}
+
+.info-card__description {
+  line-height: 1.6;
+  margin-bottom: var(--spacing-2);
+}
+
+.info-card__description--italic {
+  font-style: italic;
+}
+
+.info-card__author {
+  margin-top: var(--spacing-2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info-card__icon {
+    height: 60px;
+  }
+}

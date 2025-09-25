@@ -1,0 +1,58 @@
+.shop-profile { display: flex; flex-direction: column; gap: 24px; }
+
+.shop-profile__loading,
+.shop-profile__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border-light);
+}
+
+.shop-profile__top { background: var(--color-surface-primary, #fff); border-radius: 8px; padding: 16px; box-shadow: 14px 17px 40px 4px rgba(112,144,176,0.08); }
+.shop-profile__cover { display: grid; grid-template-columns: 160px 1fr; gap: 20px; align-items: center; }
+.shop-profile__photo { width: 160px; height: 199px; border-radius: 16px; background: #d9d9d9; }
+.shop-profile__topRight { display: flex; flex-direction: column; gap: 16px; }
+.shop-profile__titleRow { display: flex; align-items: center; gap: 12px; }
+.shop-profile__editBtn { width: 60px; height: 33px; border-radius: 8px; border: 1px solid var(--color-border-primary, #603809); background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+.shop-profile__editIcon { width: 16px; height: 16px; border: 1.5px solid #603809; border-top-color: transparent; border-left-color: transparent; transform: rotate(45deg); }
+.shop-profile__details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.shop-profile__contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.shop-profile__contactItem { display: flex; align-items: center; gap: 12px; }
+.shop-profile__icon { width: 24px; height: 24px; border: 1.5px solid #603809; border-radius: 50%; }
+.shop-profile__icon--phone {}
+.shop-profile__icon--calendar {}
+.shop-profile__icon--email {}
+
+.shop-profile__bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.shop-profile__ownerCard, .shop-profile__menuCard { background: var(--color-surface-primary, #fff); border-radius: 8px; padding: 24px; box-shadow: 14px 17px 40px 4px rgba(112,144,176,0.08); }
+.shop-profile__ownerHeader { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.shop-profile__ownerAvatar { width: 70px; height: 70px; border-radius: 50%; }
+.shop-profile__muted { opacity: .6; }
+.shop-profile__subtle { color: var(--color-text-secondary, #4B5563); }
+.shop-profile__ownerField { display: flex; flex-direction: column; gap: 8px; }
+.shop-profile__ownerField--row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.shop-profile__ownerFieldCol { display: flex; flex-direction: column; gap: 8px; }
+.shop-profile__divider { height: 1px; background: #E5E7EB; margin: 16px 0; }
+
+.shop-profile__menuHeader { font-weight: 700; margin-bottom: 8px; }
+.shop-profile__menuItem { display: grid; grid-template-columns: 33px 1fr 24px; align-items: center; gap: 12px; padding: 8px 0; background: transparent; border: none; text-align: left; cursor: pointer; }
+.shop-profile__menuIcon { width: 33px; height: 33px; border: 2px solid var(--color-text-primary, #525252); border-radius: 8px; }
+.shop-profile__menuChevron { width: 9px; height: 9px; border-right: 2px solid var(--color-text-primary, #525252); border-bottom: 2px solid var(--color-text-primary, #525252); transform: rotate(-45deg); justify-self: end; }
+
+.shop-profile__changePassword { display: flex; flex-direction: column; gap: 16px; }
+.shop-profile__editProfile { display: flex; flex-direction: column; gap: 16px; }
+.shop-profile__formField { display: flex; flex-direction: column; gap: 8px; }
+.shop-profile__actions { display: flex; gap: 12px; margin-top: 4px; }
+.shop-profile__error { color: var(--color-border-error, #dc2626); }
+
+@media (max-width: 1024px) {
+  .shop-profile__details { grid-template-columns: 1fr; }
+  .shop-profile__contacts { grid-template-columns: 1fr; }
+  .shop-profile__bottom { grid-template-columns: 1fr; }
+  .shop-profile__cover { grid-template-columns: 1fr; }
+}
+
+

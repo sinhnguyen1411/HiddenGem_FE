@@ -1,0 +1,13 @@
+.location-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.location-item__title {
+  margin-bottom: var(--spacing-1);
+}
+
+.location-item__content {
+  line-height: 1.6;
+}

@@ -1,0 +1,64 @@
+.link {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Variants */
+.link--default {
+  color: var(--color-text-primary);
+}
+
+.link--default:hover {
+  color: var(--color-text-secondary);
+}
+
+.link--primary {
+  color: var(--color-primary-500);
+}
+
+.link--primary:hover {
+  color: var(--color-primary-600);
+}
+
+.link--secondary {
+  color: var(--color-text-secondary);
+}
+
+.link--secondary:hover {
+  color: var(--color-text-primary);
+}
+
+.link--muted {
+  color: var(--color-text-tertiary);
+}
+
+.link--muted:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Sizes */
+.link--sm {
+  font-size: 12px;
+}
+
+.link--md {
+  font-size: 14px;
+}
+
+.link--lg {
+  font-size: 16px;
+}
+
+/* Underline */
+.link--underline {
+  text-decoration: underline;
+}
+
+.link--underline:hover {
+  text-decoration: none;
+}

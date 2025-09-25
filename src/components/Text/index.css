@@ -1,0 +1,97 @@
+.text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Sizes */
+.text--xs {
+  font-size: 12px;
+}
+
+.text--sm {
+  font-size: 14px;
+}
+
+.text--md {
+  font-size: 16px;
+}
+
+.text--lg {
+  font-size: 18px;
+}
+
+.text--xl {
+  font-size: 20px;
+}
+
+.text--2xl {
+  font-size: 24px;
+}
+
+.text--3xl {
+  font-size: 28px;
+}
+
+/* Weights */
+.text--normal {
+  font-weight: 400;
+}
+
+.text--medium {
+  font-weight: 500;
+}
+
+.text--semibold {
+  font-weight: 600;
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+/* Colors */
+.text--primary {
+  color: var(--color-primary-500);
+}
+
+.text--secondary {
+  color: var(--color-text-secondary);
+}
+
+.text--accent {
+  color: var(--color-text-primary);
+}
+
+.text--muted {
+  color: var(--color-text-tertiary);
+}
+
+.text--white {
+  color: var(--color-text-inverse);
+}
+
+.text--black {
+  color: var(--color-text-primary);
+}
+
+/* Alignment */
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+/* Interactive */
+.text[onClick] {
+  cursor: pointer;
+}
+
+.text[onClick]:hover {
+  opacity: 0.8;
+}

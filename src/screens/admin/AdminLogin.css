@@ -1,0 +1,223 @@
+/* ========================================
+   ADMIN LOGIN STYLES
+   ======================================== */
+
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-primary-200) 100%);
+}
+
+.admin-login__container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.admin-login__card {
+  background-color: var(--color-surface-primary);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px var(--color-shadow-heavy);
+  padding: 3rem 2rem;
+  border: 1px solid var(--color-border-primary);
+}
+
+.admin-login__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-login__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-login__logo-icon {
+  font-size: 2rem;
+  color: var(--color-interactive-primary);
+}
+
+.admin-login__logo-text {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.admin-login__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.admin-login__form {
+  width: 100%;
+}
+
+.admin-login__form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-login__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.admin-login__description {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.admin-login__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-login__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.admin-login__input {
+  width: 100%;
+}
+
+.admin-login__error {
+  background-color: var(--color-error-50);
+  border: 1px solid var(--color-error-200);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.admin-login__actions {
+  margin-bottom: 2rem;
+}
+
+.admin-login__submit {
+  width: 100%;
+  min-height: 48px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.admin-login__demo-credentials {
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.admin-login__demo-title {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.admin-login__demo-text {
+  margin: 0.25rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.admin-login__footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.admin-login__footer-text {
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (min-width: 640px) {
+  .admin-login {
+    padding: 3rem 2rem;
+  }
+  
+  .admin-login__card {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .admin-login__container {
+    max-width: 450px;
+  }
+  
+  .admin-login__card {
+    padding: 4rem 3.5rem;
+  }
+}
+
+/* ========================================
+   DARK THEME ADJUSTMENTS
+   ======================================== */
+
+[data-theme="dark"] .admin-login {
+  background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-800) 100%);
+}
+
+[data-theme="dark"] .admin-login__card {
+  background-color: var(--color-surface-primary);
+  border-color: var(--color-border-primary);
+}
+
+[data-theme="dark"] .admin-login__demo-credentials {
+  background-color: var(--color-surface-secondary);
+  border-color: var(--color-border-primary);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-login__card {
+    transition: none;
+  }
+}
+
+/* Focus styles for better accessibility */
+.admin-login__input:focus-visible,
+.admin-login__submit:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Loading state animation */
+.admin-login__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Form validation states */
+.admin-login__input:invalid {
+  border-color: var(--color-border-error);
+}
+
+.admin-login__input:valid {
+  border-color: var(--color-border-success);
+}

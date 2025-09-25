@@ -1,0 +1,203 @@
+.coffee-list-carousel {
+  width: 100%;
+  padding: var(--spacing-6) 0;
+}
+
+.coffee-list-carousel__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+}
+
+.coffee-list-carousel__slider {
+  width: 100%;
+}
+
+.coffee-list-carousel__slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.coffee-list-carousel__card {
+  width: 100%;
+  height: 100%;
+  transition: all var(--transition-colors);
+  cursor: pointer;
+  background: var(--color-surface-primary);
+  border: 1px solid var(--color-border-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-list-carousel__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(96, 56, 9, 0.15);
+  border-color: var(--color-primary-500);
+}
+
+.coffee-list-carousel__image-section {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.coffee-list-carousel__image {
+  transition: transform var(--transition-colors);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: var(--spacing-4) auto;
+  object-fit: cover;
+}
+
+.coffee-list-carousel__card:hover .coffee-list-carousel__image {
+  transform: scale(1.05);
+}
+
+.coffee-list-carousel__content {
+  padding: 0 var(--spacing-4) var(--spacing-4);
+}
+
+.coffee-list-carousel__location-icon {
+  font-size: 16px;
+}
+
+.coffee-list-carousel__distance {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.coffee-list-carousel__name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: var(--spacing-2) 0;
+}
+
+.coffee-list-carousel__details {
+  text-align: center;
+  margin-top: var(--spacing-2);
+}
+
+.coffee-list-carousel__uptime,
+.coffee-list-carousel__price {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-1) 0;
+}
+
+/* Star Rating */
+.coffee-list-carousel__star {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.coffee-list-carousel__star--filled {
+  color: var(--color-warning-500);
+}
+
+.coffee-list-carousel__star--half {
+  color: var(--color-warning-500);
+  opacity: 0.7;
+}
+
+.coffee-list-carousel__star--empty {
+  color: var(--color-neutral-300);
+}
+
+/* Carousel Controls Styling */
+.coffee-list-carousel :global(.mantine-Carousel-controls) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.coffee-list-carousel :global(.mantine-Carousel-control) {
+  background: var(--color-primary-500);
+  border: none;
+  color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all var(--transition-colors);
+  box-shadow: 0 4px 12px rgba(96, 56, 9, 0.3);
+}
+
+.coffee-list-carousel :global(.mantine-Carousel-control:hover) {
+  background: var(--color-primary-600);
+  transform: scale(1.1);
+}
+
+.coffee-list-carousel :global(.mantine-Carousel-control[data-inactive]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Arrow Icons */
+.coffee-list-carousel__arrow {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+/* Carousel Indicators */
+.coffee-list-carousel :global(.mantine-Carousel-indicators) {
+  margin-top: var(--spacing-4);
+  gap: var(--spacing-2);
+}
+
+.coffee-list-carousel :global(.mantine-Carousel-indicator) {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border-secondary);
+  border: none;
+  transition: all var(--transition-colors);
+}
+
+.coffee-list-carousel :global(.mantine-Carousel-indicator[data-active]) {
+  background: var(--color-primary-500);
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coffee-list-carousel {
+    padding: var(--spacing-4) 0;
+  }
+  
+  .coffee-list-carousel__title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .coffee-list-carousel :global(.mantine-Carousel-control) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-list-carousel__title {
+    font-size: 1.1rem;
+  }
+  
+  .coffee-list-carousel__image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .coffee-list-carousel__name {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,133 @@
+.service-add {
+  padding: 24px;
+}
+
+.service-add__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.service-add__header-left {
+  flex: 1;
+}
+
+.service-add__title {
+  margin-bottom: 8px;
+}
+
+.service-add__description {
+  margin-bottom: 0;
+}
+
+.service-add__header-right {
+  display: flex;
+  gap: 8px;
+}
+
+.service-add__content {
+  max-width: 600px;
+}
+
+.service-add__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.service-add__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-add__label {
+  display: block;
+}
+
+.service-add__label-text {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.service-add__input {
+  width: 100%;
+}
+
+.service-add__textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.2s ease;
+}
+
+.service-add__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.service-add__textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.service-add__error {
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.service-add__form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .service-add {
+    padding: 16px;
+  }
+  
+  .service-add__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .service-add__header-right {
+    justify-content: flex-end;
+  }
+  
+  .service-add__form-actions {
+    flex-direction: column;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .service-add__textarea {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .service-add__textarea:focus {
+  border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .service-add__textarea::placeholder {
+  color: var(--color-text-muted);
+}

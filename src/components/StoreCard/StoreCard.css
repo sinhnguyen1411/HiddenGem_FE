@@ -1,0 +1,340 @@
+/* StoreCard Component Styles */
+
+/* Base Store Card */
+.store-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Default Variant (HomeScreen style) */
+.store-card--default {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.store-card--default .store-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.store-card--default .store-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-card--default .store-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--spacing-3);
+}
+
+.store-card--default .wishlist-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.store-card--default .wishlist-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.store-card--default .wishlist-icon {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.store-card--default .store-info {
+  padding: var(--spacing-4);
+}
+
+.store-card--default .store-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.store-card--default .store-hours-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-card--default .store-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.store-card--default .store-location-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.store-card--default .location-info {
+  flex: 1;
+}
+
+.store-card--default .rating-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-1);
+}
+
+.store-card--default .stars {
+  display: flex;
+  gap: 2px;
+}
+
+.store-card--default .star {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.store-card--default .star.filled {
+  color: #ffd700;
+}
+
+/* Compact Variant (StoreDetailScreen style) */
+.store-card--compact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.store-card--compact .store-image-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.store-card--compact .store-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-card--compact .store-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--spacing-3);
+}
+
+.store-card--compact .wishlist-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.store-card--compact .wishlist-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.store-card--compact .wishlist-icon {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.store-card--compact .store-info {
+  padding: var(--spacing-3);
+}
+
+.store-card--compact .store-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2);
+}
+
+.store-card--compact .store-name {
+  margin: 0 0 var(--spacing-2) 0;
+  font-weight: 600;
+}
+
+.store-card--compact .store-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-card--compact .store-distance {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.store-card--compact .location-icon {
+  width: 12px;
+  height: 12px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+}
+
+.store-card--compact .store-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.store-card--compact .stars {
+  display: flex;
+  gap: 1px;
+}
+
+.store-card--compact .star {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.store-card--compact .star.filled {
+  color: #ffd700;
+}
+
+/* Detailed Variant (StoreScreen style) */
+.store-card--detailed {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.store-card--detailed:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.store-card--detailed .store-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.store-card--detailed .wishlist-btn {
+  position: absolute;
+  top: var(--spacing-3);
+  right: var(--spacing-3);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.store-card--detailed .wishlist-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.store-card--detailed .store-info {
+  padding: var(--spacing-4);
+}
+
+.store-card--detailed .store-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+.store-card--detailed .stars {
+  display: flex;
+  gap: 1px;
+}
+
+.store-card--detailed .star {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.store-card--detailed .star.filled {
+  color: #ffd700;
+}
+
+.store-card--detailed .store-name {
+  margin: 0 0 var(--spacing-2) 0;
+  font-weight: 600;
+}
+
+.store-card--detailed .store-description {
+  margin: 0 0 var(--spacing-3) 0;
+  line-height: 1.5;
+}
+
+.store-card--detailed .store-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-card--detailed .store-distance {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.store-card--detailed .store-price {
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .store-card--default .store-location-rating {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .store-card--default .rating-info {
+    align-items: flex-start;
+  }
+  
+  .store-card--compact .store-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+  
+  .store-card--detailed .store-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+}

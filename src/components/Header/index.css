@@ -1,0 +1,13 @@
+.header {
+  background: var(--color-surface-primary);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Import sub-component styles */
+@import './TopSettings.css';
+@import './NavBar.css';
+@import './MainMenu.css';

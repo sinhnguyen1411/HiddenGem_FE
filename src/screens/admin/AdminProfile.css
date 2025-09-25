@@ -1,0 +1,108 @@
+.admin-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-profile__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-profile__breadcrumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-profile__breadcrumbs-current {
+  font-weight: 700;
+}
+
+.admin-profile__back {
+  height: 44px;
+  min-width: 93px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--color-primary-500, #603809);
+  border: none;
+  cursor: pointer;
+}
+
+.admin-profile__card {
+  background: var(--color-surface-primary, #ffffff);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+}
+
+.admin-profile__identity {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.admin-profile__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.admin-profile__who {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-profile__muted { opacity: 0.5; }
+
+.admin-profile__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 20px;
+  margin-top: 16px;
+}
+
+.admin-profile__field { display: flex; flex-direction: column; gap: 8px; }
+
+.admin-profile__label { opacity: 0.8; }
+
+.admin-profile__input {
+  height: 52px;
+  border-radius: 8px;
+  background: var(--color-surface-secondary, #F9F9F9);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.admin-profile__placeholder { opacity: 0.4; }
+
+.admin-profile__emailSection {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.admin-profile__emailIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #4182F9;
+  opacity: 0.1;
+}
+
+.admin-profile__emailText { display: flex; flex-direction: column; gap: 8px; }
+
+.admin-profile__emailMeta { display: flex; gap: 16px; align-items: center; }
+
+@media (max-width: 768px) {
+  .admin-profile__grid { grid-template-columns: 1fr; }
+}
+
+

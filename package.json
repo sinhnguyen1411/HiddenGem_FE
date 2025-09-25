@@ -1,0 +1,63 @@
+{
+  "name": "HiddenGems",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mantine/carousel": "^8.2.8",
+    "@mantine/core": "^8.2.8",
+    "@mantine/dates": "^8.2.8",
+    "@mantine/dropzone": "^8.2.8",
+    "@mantine/hooks": "^8.2.8",
+    "@tabler/icons-react": "^3.34.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.126",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/react-router-dom": "^5.3.3",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "figma-developer-mcp": "^0.6.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "^6.30.1",
+    "react-toastify": "^11.0.5",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "@types/leaflet": "^1.9.20",
+    "react-scripts": "^5.0.1"
+  }
+}
